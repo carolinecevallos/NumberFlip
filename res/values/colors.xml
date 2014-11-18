@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dataColor">#005500</color>
+    <color name="dataBackgroundColor">#C2FFC2</color>
+    <color name="actionBarColor">#193119</color>
+	<color name="lightGrayColor">#DCDCDC</color>
+    
+</resources>

@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.bombflip.MainActivity" >
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/score_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/score"
+        android:text="@string/score_text"
+        android:textSize="20sp" />
+
+    <GridView
+        android:id="@+id/gameboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_toLeftOf="@+id/score_text"
+        android:gravity="center"
+        android:numColumns="5" />
+    
+    <GridView
+        android:id="@+id/rowValuesGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/gameboard"
+        android:layout_alignTop="@id/gameboard"
+        android:layout_alignBottom="@id/gameboard"
+        android:numColumns="2"
+        android:enabled="false" />
+    
+    <GridView
+        android:id="@+id/colValuesGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gameboard"
+        android:layout_alignLeft="@id/gameboard"
+        android:layout_alignRight="@id/gameboard"
+        android:numColumns="5"
+        android:enabled="false" />
+    
+    <TextView
+        android:id="@+id/rowLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/rowValuesGrid"
+        android:layout_alignRight="@id/rowValuesGrid"
+        android:layout_above="@id/rowValuesGrid"
+        android:gravity="center"
+        android:text="@string/col_label"
+        android:textSize="12sp" />
+    
+    <TextView
+        android:id="@+id/colLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/colValuesGrid"
+        android:layout_alignTop="@id/colValuesGrid"
+        android:layout_alignBottom="@id/colValuesGrid"
+        android:gravity="center"
+        android:text="@string/row_label"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>
